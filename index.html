@@ -1,28 +1,49 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Two cities, One sky</title>
-        <link rel="stylesheet" href="css/stylesheet.css">
-        <script src="js/script.js" defer></script>
-    </head>
-    <body>
-        <main>
-        </header>
-        <p class="eyeborw">CCT360/ The Web in Real Time</p>
-        <h2>Two Cities,<br>One Sky</h2>
-        <p> Switch to between Toronto and Karachi to see how current weather changes the pages</p>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Two Cities, One Sky</title>
+  <link rel="stylesheet" href="css/stylesheet.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">CCT360 / THE WEB IN REAL TIME</p>
+      <h1>Two Cities,<br>One Sky</h1>
+      <p>Switch between Toronto and Karachi to see how current weather changes the page.</p>
     </header>
 
     <div class="controls">
-        <label for ="city">Choose a city
-            <select name="city" id="city">
-                <option value="toronto">Toronto</option>
-                <option value="karachi">Karachi</option>
-            </select>
-        </label>
-        <button id="refresh" type="button">Refresh Weather</button>
+      <label for="city">Choose a city
+        <select id="city">
+          <option value="toronto">Toronto</option>
+          <option value="karachi">Karachi</option>
+        </select>
+      </label>
+      <button id="refresh" type="button">Refresh weather</button>
     </div>
-    
-        
+
+    <section class="weather" aria-labelledby="city-name">
+      <h2 id="city-name">Toronto</h2>
+      <p id="temperature" class="temperature">
+      </p>
+      <p id="mood"></p>
+
+      <dl>
+        <div><dt>Wind speed</dt><dd id="wind">
+        </dd></div>
+        <div><dt>Cloud cover</dt><dd id="clouds">
+        </dd></div>
+      </dl>
+
+      <p id="status" role="status"></p>
+    </section>
+
+    <footer>
+      Current weather estimates from <a href="https://open-meteo.com/">Open-Meteo</a>.
+    </footer>
+  </main>
+</body>
+</html>
